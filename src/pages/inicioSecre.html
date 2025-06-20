@@ -12,35 +12,33 @@
 </head>
 
 <body class="bg-light">
-  <!-- VISTA MOVILE -->
 
-  <!-- HEADER -->
+
+<!-- HEADER -->
   <header>
-    <nav class="navbar bg-dark  ">
+    <nav class="navbar bg-verde  ">
       <div class="container">
-
-        <a class="navbar-brand d-none d-sm-block" href="#">
-          <img src="../assets/img/round-icons-zABhtzJofaM-unsplash.svg" alt="Bootstrap" width="30" height="24">
-        </a>
+        <!-- BOTÓN CERRAR SESIÓN -->
+        <div class="ms-auto d-none d-lg-block">
+          <a href="./logout.html" class="btn btn-outline-light">Cerrar sesión</a>
+        </div>
         <!-- MENU LATERAL MOVILE-->
         <button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas"
           data-bs-target="#menuLateral">
           <i class="bi bi-list"></i>
         </button>
-
-
+        <!-- Versión centrada para móvil -->
+        <div class=" d-block d-lg-none">
+          <a href="./logout.html" class="btn btn-outline-light">Cerrar sesión</a>
+        </div>
         <!-- ICONO CHAT -->
-
         <button class="btn btn-outline-light d-lg-none" type="button" data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasChat">
           <i class="bi bi-chat-dots"></i>
         </button>
-
-
-
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="menuLateral" aria-labelledby="menuLateralLabel">
+        <div class="offcanvas offcanvas-start " tabindex="-1" id="menuLateral" aria-labelledby="menuLateralLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="menuLateralLabel">Navegación</h5>
+            <h5 class="offcanvas-title" id="menuLateralLabel">Menu</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
           </div>
           <div class="offcanvas-body">
@@ -49,21 +47,19 @@
               <a href="./agendaSecre.html" class="list-group-item menu-item">📅 Agenda</a>
               <a href="./clientSecre.html" class="list-group-item menu-item">👥 Clientes</a>
               <a href="./docSecre.html" class="list-group-item menu-item">📂 Documentos</a>
-              <a href="./tareas.html" class="list-group-item menu-item">✅ Tareas</a>
-              <a href="./facturacion.html" class="list-group-item menu-item">💰 Facturación</a>
-              <a href="./informes.html" class="list-group-item menu-item">📊 Informes</a>
+              <a href="./tareaSecre.html" class="list-group-item menu-item">✅ Tareas</a>
+              <a href="./facturacionSecre.html" class="list-group-item menu-item">💰 Facturación</a>
+              <a href="./informesSecre.html" class="list-group-item menu-item">📊 Informes</a>
             </nav>
           </div>
         </div>
-
       </div>
-      <!-- FIN MENU LATERAL MOVILE -->
       </div>
     </nav>
   </header>
   <main>
-    <!-- Sección central -->
-    <div class="container col-12 col-lg-7 d-lg-none mt-3">
+    <!-- Sección central movile -->
+    <div class="container col-12 d-lg-none mt-3">
       <!-- Área de respuestas -->
       <div id="chat" class="mb-3 p-3 border rounded" style="min-height: 300px;">
 
@@ -111,12 +107,12 @@
           <h5>📋 Menú</h5>
           <nav class="list-group ">
             <a href="./inicioSecre.html" class="list-group-item menu-item active">🏠 Inicio</a>
-            <a href="./agendaSecre.html" class="list-group-item menu-item">📅 Agenda</a>
-            <a href="./clientSecre.html" class="list-group-item menu-item">👥 Clientes</a>
-            <a href="./docSecre.html" class="list-group-item menu-item">📂 Documentos</a>
-            <a href="./tareas.html" class="list-group-item menu-item">✅ Tareas</a>
-            <a href="./facturacion.html" class="list-group-item menu-item">💰 Facturación</a>
-            <a href="./informes.html" class="list-group-item menu-item">📊 Informes</a>
+              <a href="./agendaSecre.html" class="list-group-item menu-item">📅 Agenda</a>
+              <a href="./clientSecre.html" class="list-group-item menu-item">👥 Clientes</a>
+              <a href="./docSecre.html" class="list-group-item menu-item">📂 Documentos</a>
+              <a href="./tareaSecre.html" class="list-group-item menu-item">✅ Tareas</a>
+              <a href="./facturacionSecre.html" class="list-group-item menu-item">💰 Facturación</a>
+              <a href="./informesSecre.html" class="list-group-item menu-item">📊 Informes</a>
           </nav>
         </aside>
 
