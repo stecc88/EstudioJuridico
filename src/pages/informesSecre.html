@@ -47,10 +47,10 @@
                             <a href="./inicioSecre.html" class="list-group-item menu-item">🏠 Inicio</a>
                             <a href="./agendaSecre.html" class="list-group-item menu-item">📅 Agenda</a>
                             <a href="./clientSecre.html" class="list-group-item menu-item">👥 Clientes</a>
-                            <a href="./docSecre.html" class="list-group-item menu-item active">📂 Documentos</a>
+                            <a href="./docSecre.html" class="list-group-item menu-item">📂 Documentos</a>
                             <a href="./tareaSecre.html" class="list-group-item menu-item">✅ Tareas</a>
                             <a href="./facturacionSecre.html" class="list-group-item menu-item">💰 Facturación</a>
-                            <a href="./informesSecre.html" class="list-group-item menu-item">📊 Informes</a>
+                            <a href="./informesSecre.html" class="list-group-item menu-item active">📊 Informes</a>
                         </nav>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
     </header>
     <main>
         <!-- SECTION CENTER MOVIL -->
-        <section class="d-lg-none col-12 p-4">
+        <section class="col-12 p-4 d-lg-none">
             <h2 class="mb-4">📂 Gestión de Documentos</h2>
 
             <!-- Buscador -->
@@ -133,7 +133,7 @@
             </div>
 
             <!-- Subida de documentos -->
-            <div class="card mt-4 d-lg-none col-12">
+            <div class="card mt-4  d-lg-block">
                 <div class="card-body">
                     <h5 class="card-title">📤 Subir nuevo documento</h5>
                     <form>
@@ -173,16 +173,15 @@
                         <a href="./inicioSecre.html" class="list-group-item menu-item">🏠 Inicio</a>
                         <a href="./agendaSecre.html" class="list-group-item menu-item">📅 Agenda</a>
                         <a href="./clientSecre.html" class="list-group-item menu-item">👥 Clientes</a>
-                        <a href="./docSecre.html" class="list-group-item menu-item active">📂 Documentos</a>
+                        <a href="./docSecre.html" class="list-group-item menu-item">📂 Documentos</a>
                         <a href="./tareaSecre.html" class="list-group-item menu-item">✅ Tareas</a>
                         <a href="./facturacionSecre.html" class="list-group-item menu-item">💰 Facturación</a>
-                        <a href="./informesSecre.html" class="list-group-item menu-item">📊 Informes</a>
+                        <a href="./informesSecre.html" class="list-group-item menu-item active">📊 Informes</a>
                     </nav>
                 </aside>
 
-                <!-- SECTION CENTER -->
-                <!-- Sección principal -->
-                <section class="col-12 col-lg-7 p-4">
+                <!-- SECTION CENTER MOVIL -->
+                <section class="col-12 col-lg-7 p-4 ">
                     <h2 class="mb-4">📂 Gestión de Documentos</h2>
 
                     <!-- Buscador -->
@@ -196,35 +195,33 @@
                             <thead class="table-dark">
                                 <tr>
                                     <th>Nombre</th>
-                                    <th>Cliente</th>
-                                    <th>Tipo</th>
-                                    <th>Fecha</th>
+                                    <th class="d-none d-sm-table-cell">Cliente</th>
+                                    <th class="d-none d-sm-table-cell">Tipo</th>
+                                    <th class="d-none d-sm-table-cell">Fecha</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Demanda_Civil_2025.pdf</td>
-                                    <td>Juan Pérez</td>
-                                    <td>Demanda</td>
-                                    <td>07/06/2025</td>
+                                    <td class="d-none d-sm-table-cell">Juan Pérez</td>
+                                    <td class="d-none d-sm-table-cell">Demanda</td>
+                                    <td class="d-none d-sm-table-cell">07/06/2025</td>
                                     <td>
                                         <a href="#" class="btn btn-sm btn-success"><i class="bi bi-download"></i>
                                             Descargar</a>
-                                        <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i>
-                                            Eliminar</button>
+                                        <a class="btn btn-sm btn-danger a"><i class="bi bi-trash"></i> Eliminar</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Contrato_Laboral.docx</td>
-                                    <td>Ana Gómez</td>
-                                    <td>Contrato</td>
-                                    <td>05/06/2025</td>
+                                    <td class="d-none d-sm-table-cell">Ana Gómez</td>
+                                    <td class="d-none d-sm-table-cell">Contrato</td>
+                                    <td class="d-none d-sm-table-cell">05/06/2025</td>
                                     <td>
                                         <a href="#" class="btn btn-sm btn-success"><i class="bi bi-download"></i>
                                             Descargar</a>
-                                        <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i>
-                                            Eliminar</button>
+                                        <a class="btn btn-sm btn-danger a"><i class="bi bi-trash"></i> Eliminar</a>
                                     </td>
                                 </tr>
                                 <!-- Más documentos -->
@@ -233,7 +230,7 @@
                     </div>
 
                     <!-- Subida de documentos -->
-                    <div class="card mt-4">
+                    <div class="card mt-4 ">
                         <div class="card-body">
                             <h5 class="card-title">📤 Subir nuevo documento</h5>
                             <form>
@@ -263,7 +260,6 @@
                         </div>
                     </div>
                 </section>
-
 
                 <!-- Chat -->
                 <aside class="col-lg-3 bg-light d-flex flex-column p-3 border-start" style="height: 100vh;">

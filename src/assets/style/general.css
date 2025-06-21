@@ -2,6 +2,10 @@
 .text-area-no-resize {
      resize: none;
  }
+ /* HEADER */
+.bg-verde {
+     background-color: #183d3d;
+ }
 
  /* ASIDE-IZQUIERDO */
 .menu-item {
