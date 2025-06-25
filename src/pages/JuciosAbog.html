@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asistente Responsive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/style/generalAbog.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar bg-verde  ">
+            <div class="container">
+                <!-- BOTÓN CERRAR SESIÓN -->
+                <div class="ms-auto d-none d-lg-block">
+                    <a href="./logout.html" class="btn btn-outline-light">Cerrar sesión</a>
+                </div>
+                <!-- MENU LATERAL MOVILE-->
+                <button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#menuLateral">
+                    <i class="bi bi-list"></i>
+                </button>
+                <!-- Versión centrada para móvil -->
+                <div class=" d-block d-lg-none">
+                    <a href="./logout.html" class="btn btn-outline-light">Cerrar sesión</a>
+                </div>
+                <!-- ICONO CHAT -->
+                <button class="btn btn-outline-light d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasChat">
+                    <i class="bi bi-chat-dots"></i>
+                </button>
+                <div class="offcanvas offcanvas-start " tabindex="-1" id="menuLateral"
+                    aria-labelledby="menuLateralLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="menuLateralLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Cerrar"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <nav class="list-group ">
+                            <a href="./InicioAbog.html" class="list-group-item menu-item">🏠 Inicio</a>
+                            <a href="./AgendaAbog.html" class="list-group-item menu-item">📅 Agenda</a>
+                            <a href="./ClientesAbog.html" class="list-group-item menu-item">👥 Clientes</a>
+                            <a href="./DocumentosAbog.html" class="list-group-item menu-item">📂 Documentos</a>
+                            <a href="./TareasAbog.html" class="list-group-item menu-item">✅ Tareas</a>
+                            <a href="./FacturacionAbog.html" class="list-group-item menu-item">💰 Facturación</a>
+                            <a href="./FacturacionAbog.html" class="list-group-item menu-item">📊 Informes</a>
+                            <a href="./JuciosAbog.html" class="list-group-item menu-item active">📑 Juicios</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </nav>
+        <!-- Offcanvas Chat Móvil -->
+        <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasChat"
+            aria-labelledby="offcanvasChatLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasChatLabel">💬 Chat interno</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column">
+                <div class="flex-grow-1 overflow-auto mb-3 px-2">
+                    <div class="d-flex mb-2">
+                        <div class="bg-white p-2 rounded shadow-sm text-start">
+                            <small class="text-muted">Usuario1</small><br />Hola, ¿todo listo?
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end mb-2">
+                        <div class="bg-primary text-white p-2 rounded shadow-sm text-end">
+                            <small class="text-white-50">Yo</small><br />Sí, ya está cargado ✅
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Escribe un mensaje..." />
+                    <button class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- SECTION CENTER MOVIL -->
+        <section class="col-12 p-4 d-lg-none">
+            <h2 class="mb-4">📂 Jucios en tramite</h2>
+
+            <!-- Buscador -->
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Buscar por cliente, tipo, nombre...">
+            </div>
+
+            <!-- Tabla de documentos -->
+            <div class="table-responsive">
+                <table class="table table-striped align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Nombre de juicio</th>
+                            <th>Numero de expediente</th>
+                            <th class="d-none d-sm-table-cell">Cliente</th>
+                            <th class="d-none d-sm-table-cell">Juzgado</th>
+                            <th class="d-none d-sm-table-cell">Fecha</th>
+                            <th>Archivo de legajo</th>
+                            <th>Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>"Pérez, Juan c/ Transporte del Norte S.A. s/ Daños y Perjuicios"</td>
+                            <td>15874/2023</td>
+                            <td class="d-none d-sm-table-cell">Juan Pérez</td>
+                            <td class="d-none d-sm-table-cell">Juzgado Civil y Comercial N° 4 - Tucumán</td>
+                            <td class="d-none d-sm-table-cell">07/06/2025</td>
+                            <td>Legajo_Perez_JuicioTransporte.pdf</td>
+                            <a href="#" class="btn btn-sm btn-success"><i class="bi bi-download"></i> Descargar</a>
+                            <a class="btn btn-sm btn-danger a"><i class="bi bi-trash"></i> Eliminar</a>
+                            <a class="btn btn-sm btn-danger a"><i class="bi bi-trash"></i>Ver mas+</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>"Gómez, Laura c/ Clínica San Marcos S.A. s/ Mala Praxis"</td>
+                            <td>15874/2023</td>
+                            <td class="d-none d-sm-table-cell">Laura Gómez</td>
+                            <td class="d-none d-sm-table-cell">Juzgado Civil y Comercial N° 2 - San Miguel de Tucumán
+                            </td>
+                            <td class="d-none d-sm-table-cell">05/06/2025</td>
+                            <td>Legajo_Gomez_MalaPraxis.pdf</td>
+                            <td>
+                                <a href="#" class="btn btn-sm btn-success"><i class="bi bi-download"></i> Descargar</a>
+                                <a class="btn btn-sm btn-danger a"><i class="bi bi-trash"></i> Eliminar</a>
+                                <a class="btn btn-sm btn-primary a"><i class=""></i>Ver mas+</a>
+                            </td>
+                        </tr>
+                        <!-- Más documentos -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Subida de documentos -->
+            <div class="card mt-4  d-lg-block">
+                <div class="card-body">
+                    <h5 class="card-title">📤 Subir nuevo documento</h5>
+                    <form>
+                        <div class="mb-3">
+                            <label for="cliente" class="form-label">Cliente</label>
+                            <input type="text" class="form-control" id="cliente" placeholder="Nombre del cliente"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tipoDoc" class="form-label">Tipo de documento</label>
+                            <select class="form-select" id="tipoDoc" required>
+                                <option value="">Seleccionar</option>
+                                <option>Demanda</option>
+                                <option>Contrato</option>
+                                <option>Escrito</option>
+                                <option>Poder</option>
+                                <option>Notificación</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="archivo" class="form-label">Seleccionar archivo</label>
+                            <input type="file" class="form-control" id="archivo" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Subir documento</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!------------------------- VISTA ESCRITORIO ------------------------------>
+        <div class="container-fluid pt-4 d-none d-lg-block">
+            <div class="row text-center">
+                <!-- Menú -->
+                <aside class="col-lg-2 p-3 text-start">
+                    <h5>📋 Menú</h5>
+                    <nav class="list-group ">
+                        <a href="./InicioAbog.html" class="list-group-item menu-item">🏠 Inicio</a>
+                        <a href="./AgendaAbog.html" class="list-group-item menu-item">📅 Agenda</a>
+                        <a href="./ClientesAbog.html" class="list-group-item menu-item">👥 Clientes</a>
+                        <a href="./DocumentosAbog.html" class="list-group-item menu-item">📂 Documentos</a>
+                        <a href="./TareasAbog.html" class="list-group-item menu-item">✅ Tareas</a>
+                        <a href="./FacturacionAbog.html" class="list-group-item menu-item">💰 Facturación</a>
+                        <a href="./InformesAbog.html" class="list-group-item menu-item">📊 Informes</a>
+                        <a href="./JuciosAbog.html" class="list-group-item menu-item active">📑 Juicios</a>
+                    </nav>
+                </aside>
+
+                <!-- SECTION CENTER MOVIL -->
+                <section class="col-12 col-lg-7 p-4 ">
+                    <h2 class="mb-4">📂 Gestión de Documentos</h2>
+
+                    <!-- Buscador -->
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Buscar por cliente, tipo, nombre...">
+                    </div>
+
+                    <!-- Tabla de documentos -->
+                    <div class="table-responsive">
+                        <table class="table table-striped align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Nombre de juicio</th>
+                                    <th>Numero de expediente</th>
+                                    <th class="d-none d-sm-table-cell">Cliente</th>
+                                    <th class="d-none d-sm-table-cell">Juzgado</th>
+                                    <th class="d-none d-sm-table-cell">Fecha</th>
+                                    <th>Archivo de legajo</th>
+                                    <th>Opciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>"Pérez, Juan c/ Transporte del Norte S.A. s/ Daños y Perjuicios"</td>
+                                    <td>15874/2023</td>
+                                    <td class="d-none d-sm-table-cell">Juan Pérez</td>
+                                    <td class="d-none d-sm-table-cell">Juzgado Civil y Comercial N° 4 - Tucumán</td>
+                                    <td class="d-none d-sm-table-cell">07/06/2025</td>
+                                    <td>Legajo_Perez_JuicioTransporte.pdf</td>
+                                    <td>
+                                        <a href="#" class="btn btn-sm btn-success"><i class="bi bi-download"></i>
+                                            Descargar</a>
+                                        <a class="btn btn-sm btn-danger a"><i class="bi bi-trash"></i>Eliminar</a>
+                                        <a class="btn btn-sm btn-primary a"><i class="bi "></i>Ver mas +</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>"Gómez, Laura c/ Clínica San Marcos S.A. s/ Mala Praxis"</td>
+                                    <td>13899/2022</td>
+                                    <td class="d-none d-sm-table-cell">Laura Gómez</td>
+                                    <td class="d-none d-sm-table-cell">Juzgado Civil y Comercial N° 2 - San Miguel de
+                                        Tucumán</td>
+                                    <td class="d-none d-sm-table-cell">05/06/2025</td>
+                                    <td>Legajo_Gomez_MalaPraxis.pdf</td>
+                                    <td>
+                                        <a href="#" class="btn btn-sm btn-success"><i class="bi bi-download"></i>
+                                            Descargar</a>
+                                        <a class="btn btn-sm btn-danger a"><i class="bi bi-trash"></i> Eliminar</a>
+                                        <a class="btn btn-sm btn-primary a"><i class=""></i>Ver mas+</a>
+                                    </td>
+                                </tr>
+                                <!-- Más documentos -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Subida de documentos -->
+                    <div class="card mt-4 ">
+                        <div class="card-body">
+                            <h5 class="card-title">📤 Subir nuevo documento</h5>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="cliente" class="form-label">Cliente</label>
+                                    <input type="text" class="form-control" id="cliente"
+                                        placeholder="Nombre del cliente" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="tipoDoc" class="form-label">Tipo de documento</label>
+                                    <select class="form-select" id="tipoDoc" required>
+                                        <option value="">Seleccionar</option>
+                                        <option>Demanda</option>
+                                        <option>Contrato</option>
+                                        <option>Escrito</option>
+                                        <option>Poder</option>
+                                        <option>Notificación</option>
+                                        <option>Otro</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="archivo" class="form-label">Seleccionar archivo</label>
+                                    <input type="file" class="form-control" id="archivo" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Subir documento</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Chat -->
+                <aside class="col-lg-3 bg-light d-flex flex-column p-3 border-start" style="height: 100vh;">
+                    <h5 class="mb-3">💬 Chat interno</h5>
+                    <div class="flex-grow-1 overflow-auto mb-3 px-2">
+                        <div class="d-flex mb-2">
+                            <div class="bg-white p-2 rounded shadow-sm text-start">
+                                <small class="text-muted">Usuario1</small><br />Hola, ¿todo listo?
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end mb-2">
+                            <div class="bg-primary text-white p-2 rounded shadow-sm text-end">
+                                <small class="text-white-50">Yo</small><br />Sí, ya está cargado ✅
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Escribe un mensaje..." />
+                        <button class="btn btn-primary">Enviar</button>
+                    </div>
+
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
