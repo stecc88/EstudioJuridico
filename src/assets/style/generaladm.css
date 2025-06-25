@@ -1,0 +1,174 @@
+/* HEADER */
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Header principal */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #183D3D;
+  padding: 10px 20px;
+  min-height: 70px;
+  color: white;
+  flex-wrap: wrap; /* para responsive */
+}
+
+.main-header .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.main-header .logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.ProyectoG4 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+nav a {
+  font-weight: 600;
+  padding-right: 10px;
+  color: white;
+}
+
+nav a:hover {
+  color: #ddd;
+}
+
+/* Menú de perfil */
+.profile-menu {
+  position: relative;
+}
+
+.profile-button {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Dropdown */
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Mostrar menú al pasar mouse sobre perfil */
+.profile-menu:hover .dropdown {
+  display: block;
+}
+
+/* Responsive */
+
+/* Para pantallas menores a 700px */
+@media (max-width: 700px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-header .logo {
+    margin-bottom: 10px;
+  }
+
+  .profile-menu {
+    align-self: flex-end;
+    width: 100%;
+    text-align: right;
+  }
+
+  .dropdown {
+    right: 0;
+    width: 100%;
+  }
+
+  .ProyectoG4 {
+    font-size: 1.2em;
+  }
+
+  .main-header .logo img {
+    height: 40px;
+  }
+}
+
+/* ASIDE-IZQUIERDO */
+.menu-item {
+  color: #183D3D; /* Color de texto normal */
+  background-color: #f8f9fa; /* Fondo normal */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-item:hover {
+  background-color: #93B1A6; /* Fondo al hacer hover */
+  color: #FAF1E6; /* Color de texto al hacer hover */
+}
+
+.menu-item.active {
+  background-color: #183D3D; /* Fondo del elemento activo */
+  color: #FAF1E6; /* Color de texto del elemento activo */
+  font-weight: bold;
+}
+
+/* SECTION-CENTER */
+
+.inputcontainer { 
+  padding: 10px;  
+  display: flex;
+  align-items: center;
+}
+
+.inputcontainer textarea {
+  flex: content;
+  resize: horizontal;
+  border: 1px solid #40414f;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+}
+.inputcontainer button {
+  background-color: #0d6efd;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  padding: 10px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.inputcontainer button:hover {
+  background-color: #13a06d;
+}
+
