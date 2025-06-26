@@ -12,13 +12,18 @@ a {
 /* Header principal */
 .main-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  direction: row-reverse;
+  padding: 10px;
+  
+  
   background-color: #183D3D;
-  padding: 10px 20px;
-  min-height: 70px;
-  color: white;
-  flex-wrap: wrap; /* para responsive */
+  
+ 
+  
+  
+}
+.logoo{
+ 
 }
 
 .main-header .logo {
@@ -29,13 +34,14 @@ a {
 }
 
 .main-header .logo img {
-  height: 50px;
+  height: 40px;
   margin-right: 10px;
 }
 
 .ProyectoG4 {
   margin: 0;
-  font-size: 1.5em;
+  font-size: 15px;
+   height: 30px;
 }
 
 nav a {

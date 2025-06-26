@@ -10,17 +10,20 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <link rel="stylesheet" href="./src/assets/style/index.css">
+    <link rel="stylesheet" href="./src/assets/style/generaladm.css">
 </head>
 
 
   <body>
-  <header class="col-12">
-    <a href="#" class="logo">
-      <img src="./src/assets/img/Logoheader.jpeg" alt="Logo compañía">
-      <h2 class="ProyectoG4 text-white">ProyectoG4</h2>
-    </a>
-  </header>
+ <!-- HEADER -->
+<header class="main-header d-flex flex-wrap align-items-center justify-content-between px-3 py-2">
+  <a href="#" class="d-flex align-items-center text-decoration-none mb-2 mb-lg-0">
+    <img src="./src/img/logoHeader.png" alt="logo compañia" style="height: 40px; margin-right: 10px;">
+    <h2 class="ProyectoG4 m-0">ProyectoG4</h2>
+  </a>
 
+ 
+</header>
   <main>
     
     <!-- VERSION ESCRITORIO -->
@@ -45,10 +48,10 @@
                 <label class="form-check-label" for="rememberMe">Recuérdame</label>
               </div>
               <div class="d-grid gap-2">
-                <button class="btn btn-primary" type="submit">Iniciar Sesión</button>
+                <button class="btn btn-outline-danger " type="submit"><a class="color" href="./src/pages/inicioSecre.html ">Iniciar Sesión</a></button>
                 <span class="text-center">o</span>
-                <button class="btn btn-outline-primary" type="button">Continuar con Google</button>
-                <button type="button" class="btn btn-link">Olvidé mi contraseña</button>
+                <button class="btn btn-primary" type="button"><a href="./src/pages/InicioAbog.html">Continuar con Google</a></button>
+                <button type="button" class="btn btn-primary"><a href="./src/pages/adminPage.html">Olvidé mi contraseña</a></button>
               </div>
             </form>
           </div>
@@ -59,9 +62,7 @@
 
   <footer>
     <div class="footer-container">
-      <div class="footer-logo">
-        <img src="./src/assets/img/Logoheader.jpeg" alt="Logo pie">
-      </div>
+      
       <div class="footer-contact">
         <h3>Contactos</h3>
         <p><strong>Tel:</strong> 381-55667788</p>
