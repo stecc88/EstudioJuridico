@@ -1,0 +1,25 @@
+.text-area-no-resize {
+     resize: none;
+ }
+ /* HEADER */
+.bg-verde {
+     background-color: #183d3d;
+ }
+
+ /* ASIDE-IZQUIERDO */
+
+
+.menu-item:hover {
+  background-color: #93b1a6;
+  color: #faf1e6;
+}
+
+.menu-item.active {
+  background-color: #183d3d;
+  color: #faf1e6;
+  font-weight: bold;
+}
+
+.a{
+  padding-right: 20px;
+}
