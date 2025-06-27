@@ -13,13 +13,10 @@ a {
 .main-header {
   display: flex;
   direction: row-reverse;
-  padding: 10px;
-  
+  padding: 10px; 
   
   background-color: #183D3D;
-  
- 
-  
+   
   
 }
 .logoo{
