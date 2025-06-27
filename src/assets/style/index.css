@@ -12,32 +12,11 @@
     body {
       display: flex;
       flex-direction: column;
-    }
+    } 
+   
+  
 
-    a {
-      text-decoration: none;
-      color: white;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #183D3D;
-      padding: 10px;
-      min-height: 100px;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo img {
-      height: 70px;
-      margin-right: 10px;
-    }
+   
 
     main {
       background-image: url('../img/Fondo\ main.jpg');
@@ -51,7 +30,7 @@
     }
 
     footer {
-      background-color: #0f2e2e;
+      background-color: #183D3D;
       color: white;
       padding: 3rem 1rem;
     }
@@ -65,9 +44,7 @@
       gap: 2rem;
     }
 
-    .footer-logo img {
-      width: 100px;
-    }
+  
 
     .footer-contact h3 {
       font-size: 1.2rem;
