@@ -1,14 +1,13 @@
-
 .text-area-no-resize {
      resize: none;
  }
+ /* HEADER */
+.bg-verde {
+     background-color: #183d3d;
+ }
 
  /* ASIDE-IZQUIERDO */
-.menu-item {
-  color: #183d3d;
-  background-color: #f8f9fa;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
+
 
 .menu-item:hover {
   background-color: #93b1a6;
